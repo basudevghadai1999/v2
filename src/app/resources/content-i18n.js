@@ -2,15 +2,15 @@ import { InlineCode } from "@/once-ui/components";
 
 const createI18nContent = (t) => {
     const person = {
-        firstName: 'Selene',
-        lastName:  'Yu',
+        firstName: 'Basudev',
+        lastName:  'Ghadia',
         get name() {
             return `${this.firstName} ${this.lastName}`;
         },
-        role:      t("person.role"),
-        avatar:    '/images/avatar.jpg',
-        location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-        languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+        role:      t("person.role"), // Role will be translated
+        avatar:    '/images/avatar.jpg', // Change this if you have a new avatar
+        location:  'Asia/Kolkata', // India time zone as you're based in Odisha
+        languages: ['English', 'Hindi', 'Odia'],  // Optional: You can add languages here
     }
 
     const newsletter = {
@@ -20,27 +20,25 @@ const createI18nContent = (t) => {
     }
 
     const social = [
-        // Links are automatically displayed.
-        // Import new icons in /once-ui/icons.ts
         {
             name: 'GitHub',
             icon: 'github',
-            link: 'https://github.com/once-ui-system/nextjs-starter',
+            link: 'https://github.com/basudevghadai1999', // Update with your GitHub link
         },
         {
             name: 'LinkedIn',
             icon: 'linkedin',
-            link: 'https://www.linkedin.com/company/once-ui/',
+            link: 'https://www.linkedin.com/in/basudev-ghadai-67b07b200/', // Update with your LinkedIn link
         },
         {
             name: 'X',
             icon: 'x',
-            link: '',
+            link: 'https://twitter.com/basudevghadai', // Update with your Twitter link
         },
         {
             name: 'Email',
             icon: 'email',
-            link: 'mailto:example@gmail.com',
+            link: 'mailto:ghadaibasudev1234@gmail.com', // Update with your email
         },
     ]
 
@@ -65,7 +63,7 @@ const createI18nContent = (t) => {
         },
         calendar: {
             display: true,
-            link: 'https://cal.com'
+            link: 'https://cal.com/basudev', // You can update this with your calendar link if available
         },
         intro: {
             display: true,
@@ -73,75 +71,81 @@ const createI18nContent = (t) => {
             description: <>{t("about.intro.description")}</>
         },
         work: {
-            display: true, // set to false to hide this section
+            display: true, 
             title: t("about.work.title"),
             experiences: [
                 {
-                    company: 'FLY',
-                    timeframe: t("about.work.experiences.FLY.timeframe"),
-                    role: t("about.work.experiences.FLY.role"),
-                    achievements: t("about.work.experiences.FLY.achievements").split(";"),
-                    images: [ // optional: leave the array empty if you don't want to display images
+                    company: 'Sapat International Pvt Ltd',
+                    timeframe: t("about.work.experiences.Sapat.timeframe"),
+                    role: t("about.work.experiences.Sapat.role"),
+                    achievements: t("about.work.experiences.Sapat.achievements").split(";"),
+                    images: [
                         {
                             src: '/images/projects/project-01/cover-01.jpg',
-                            alt: 'Once UI Project',
+                            alt: 'NA',
                             width: 16,
                             height: 9
                         }
                     ]
                 },
                 {
-                    company: 'Creativ3',
-                    timeframe: t("about.work.experiences.Creativ3.timeframe"),
-                    role: t("about.work.experiences.Creativ3.role"),
-                    achievements: t("about.work.experiences.Creativ3.achievements").split(";"),
+                    company: 'CPS India Pvt Ltd',
+                    timeframe: t("about.work.experiences.CPS.timeframe"),
+                    role: t("about.work.experiences.CPS.role"),
+                    achievements: t("about.work.experiences.CPS.achievements").split(";"),
                     images: [ ]
                 }
             ]
         },
         studies: {
-            display: true, // set to false to hide this section
-            title: 'Studies',
+            display: true,
+            title: 'BCA - Computer Applications',
             institutions: [
                 {
-                    name: 'University of Jakarta',
-                    description: <>{t(`about.studies.institutions.University of Jakarta.description`)}</>,
+                    name: 'IGNOU (Indira Gandhi National Open University)',
+                    description: <>{t(`about.studies.institutions.IGNOU.description`)}</>,
                 },
                 {
-                    name: 'Build the Future',
-                    description: <>{t("about.studies.institutions.Build the Future.description")}</>,
+                    name: 'National Skills Training Institute (Advanced Diploma in IT)',
+                    description: <>{t("about.studies.institutions.NSTI.description")}</>,
                 }
             ]
         },
         technical: {
-            display: true, // set to false to hide this section
+            display: true,
             title: t("about.technical.title"),
             skills: [
                 {
-                    title: 'Figma',
-                    description: <>{t("about.technical.skills.Figma.description")}</>,
+                    title: 'Python',
+                    description: <>{t("about.technical.skills.Python.description")}</>,
                     images: [
                         {
                             src: '/images/projects/project-01/cover-02.jpg',
-                            alt: 'Project image',
+                            alt: 'Python Project',
                             width: 16,
                             height: 9
-                        },
+                        }
+                    ]
+                },
+                {
+                    title: 'Flask',
+                    description: <>{t("about.technical.skills.Flask.description")}</>, 
+                    images: [
                         {
                             src: '/images/projects/project-01/cover-03.jpg',
-                            alt: 'Project image',
+                            alt: 'Flask Project',
                             width: 16,
                             height: 9
                         },
                     ]
                 },
                 {
-                    title: 'Next.js',
-                    description: <>{t("about.technical.skills.Nextjs.description")}</>, // "." not accepted in next-intl namespace
+                    title: 'Odoo 17',
+                    description: <>{t("about.technical.skills.Odoo.description")}</>,
                     images: [
                         {
                             src: '/images/projects/project-01/cover-04.jpg',
-                            alt: 'Project image',
+                            alt: 'Odoo Project',
                             width: 16,
                             height: 9
                         },
@@ -155,23 +159,18 @@ const createI18nContent = (t) => {
         label: t("blog.label"),
         title: t("blog.title"),
         description: t("blog.description", {name: person.name})
-        // Create new blog posts by adding a new .mdx file to app/blog/posts
-        // All posts will be listed on the /blog route
     }
 
     const work = {
         label: t("work.label"),
         title: t("work.title"),
         description: t("work.description", {name: person.name})
-        // Create new project pages by adding a new .mdx file to app/blog/posts
-        // All projects will be listed on the /home and /work routes
     }
 
     const gallery = {
         label: t("gallery.label"),
         title: t("gallery.title"),
         description: t("gallery.description", {name: person.name}),
-        // Images from https://pexels.com
         images: [
             {
                 src: '/images/gallery/img-01.jpg',
@@ -186,7 +185,7 @@ const createI18nContent = (t) => {
             { 
                 src: '/images/gallery/img-03.jpg',
                 alt: 'image',
-                orientation: 'vertical'
+                orientation: 'horizontal'
             },
             { 
                 src: '/images/gallery/img-04.jpg',
@@ -203,48 +202,9 @@ const createI18nContent = (t) => {
                 alt: 'image',
                 orientation: 'vertical'
             },
-            {
-                src: '/images/gallery/img-07.jpg',
-                alt: 'image',
-                orientation: 'horizontal'
-            },
-            {
-                src: '/images/gallery/img-08.jpg',
-                alt: 'image',
-                orientation: 'vertical'
-            },
-            {
-                src: '/images/gallery/img-09.jpg',
-                alt: 'image',
-                orientation: 'horizontal'
-            },
-            {
-                src: '/images/gallery/img-10.jpg',
-                alt: 'image',
-                orientation: 'horizontal'
-            },
-            { 
-                src: '/images/gallery/img-11.jpg',
-                alt: 'image',
-                orientation: 'vertical'
-            },
-            {
-                src: '/images/gallery/img-12.jpg',
-                alt: 'image',
-                orientation: 'horizontal'
-            },
-            {
-                src: '/images/gallery/img-13.jpg',
-                alt: 'image',
-                orientation: 'horizontal'
-            },
-            { 
-                src: '/images/gallery/img-14.jpg',
-                alt: 'image',
-                orientation: 'horizontal'
-            },
         ]
     }
+    
     return {
         person,
         social,
