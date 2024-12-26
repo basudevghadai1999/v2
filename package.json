@@ -14,10 +14,16 @@
 		"@next/mdx": "^14.2.16",
 		"classnames": "^2.5.1",
 		"cookie": "^1.0.1",
+<<<<<<< HEAD
 		"eslint": "^7.32.0",
 		"gray-matter": "^4.0.3",
 		"next": "^14.2.16",
 		"next-intl": "^3.26.3",
+=======
+		"gray-matter": "^4.0.3",
+		"next": "^14.2.16",
+		"next-intl": "^3.23.5",
+>>>>>>> 93324baadfcfe5b6b49694667d7bcba8d46490ca
 		"next-mdx-remote": "^5.0.0",
 		"postcss": "^8.4.39",
 		"postcss-preset-env": "^9.5.15",
@@ -37,7 +43,10 @@
 		"@types/node": "^20",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
+<<<<<<< HEAD
 		"eslint-config-next": "^15.1.2",
+=======
+>>>>>>> 93324baadfcfe5b6b49694667d7bcba8d46490ca
 		"postcss-custom-media": "^10.0.7",
 		"postcss-flexbugs-fixes": "^5.0.2",
 		"typescript": "^5"
