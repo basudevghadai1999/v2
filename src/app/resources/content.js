@@ -1,15 +1,15 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Basudev',
+    lastName:  'Ghadai',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
+    role:      'Python Developer',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    location:  'Asia/Kolkata',   // Expecting the IANA time zone identifier, e.g., 'Asia/Kolkata'
+    languages: ['English', 'Hindi']  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
@@ -19,17 +19,15 @@ const newsletter = {
 }
 
 const social = [
-    // Links are automatically displayed.
-    // Import new icons in /once-ui/icons.ts
     {
         name: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
+        link: 'https://github.com/basudevghadai1999', // Replace with actual GitHub link
     },
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/once-ui/',
+        link: 'https://www.linkedin.com/in/basudev-ghadai-67b07b200/',
     },
     {
         name: 'X',
@@ -39,7 +37,7 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:example@gmail.com',
+        link: 'mailto:ghadaibasudev1234@gmail.com', // Replace with actual email
     },
 ]
 
@@ -47,8 +45,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    headline: <>Software Developer and Builder</>,
+    subline: <>I'm Basudev Ghadai, a software developer at <InlineCode>Sapat International Pvt Ltd</InlineCode>, where I build scalable web applications, APIs, and AI-powered solutions.</>
 }
 
 const about = {
@@ -64,43 +62,62 @@ const about = {
     },
     calendar: {
         display: true,
-        link: 'https://cal.com'
+        link: 'https://calendar.google.com/calendar/u/0/r'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        description: <>Basudev Ghadai is a Python Developer based in Odisha, specializing in backend development, AI, and automation. With experience in building scalable solutions and optimizing performance, Basudev is passionate about creating efficient and impactful software.</>
     },
     work: {
         display: true, // set to false to hide this section
         title: 'Work Experience',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'Sapat International Pvt Ltd',
+                timeframe: 'April 2024 - Present',
+                role: 'Software Developer',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Developed and maintained web applications using Python and Flask.</>,
+                    <>Customized and extended Odoo ERP modules to meet business requirements.</>,
+                    <>Worked with OpenedX to enhance LMS features.</>
                 ],
                 images: [
                     {
                         src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
+                        alt: 'Sapat Project',
                         width: 16,
                         height: 9
                     }
                 ]
             },
             {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                company: 'Central Parking Services',
+                timeframe: 'June 2023 - March 2024',
+                role: 'Service Engineer',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    <>Automated tasks using Selenium in a Linux environment.</>,
+                    <>Managed parking software configurations at Jio World Centre.</>
                 ],
-                images: [ ]
+                images: []
+            },
+            {
+                company: 'Confluex Marketing Pvt Ltd',
+                timeframe: 'May 2022 - November 2022',
+                role: 'Python Backend Developer',
+                achievements: [
+                    <>Wrote scalable code and integrated user-facing elements with back-end components to improve performance.</>
+                ],
+                images: []
+            },
+            {
+                company: 'IBM',
+                timeframe: 'September 2021 - February 2022',
+                role: 'Intern',
+                achievements: [
+                    <>Developed and deployed a self-driving car lane detection model using OpenCV, Streamlit, and AWS.</>
+                ],
+                images: []
             }
         ]
     },
@@ -109,12 +126,12 @@ const about = {
         title: 'Studies',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
+                name: 'IGNOU',
+                description: <>Bachelor of Computer Applications (BCA), Expected Graduation: 2025</>,
             },
             {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'National Skills Training Institute, Bhubaneswar',
+                description: <>Advanced Diploma in IT, Graduated with 86% in 2022 (AIR Rank 24)</>,
             }
         ]
     },
@@ -123,34 +140,46 @@ const about = {
         title: 'Technical skills',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+                title: 'Python',
+                description: <>Experienced in backend development, performance optimization, and API integrations using Python.</>,
                 images: [
                     {
                         src: '/images/projects/project-01/cover-02.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/project-01/cover-03.jpg',
-                        alt: 'Project image',
+                        alt: 'Python Project',
                         width: 16,
                         height: 9
                     },
                 ]
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-04.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                title: 'Flask',
+                description: <>Skilled in building web applications using Flask.</>,
+                images: []
+            },
+            {
+                title: 'OpenCV',
+                description: <>Developed and deployed AI-based models using OpenCV.</>,
+                images: []
+            },
+            {
+                title: 'Selenium',
+                description: <>Used Selenium for automation in a Linux environment.</>,
+                images: []
+            },
+            {
+                title: 'Odoo',
+                description: <>Customized and extended Odoo ERP modules.</>,
+                images: []
+            },
+            {
+                title: 'AWS',
+                description: <>Utilized AWS services like Lambda, S3, EC2, SageMaker, and DynamoDB for cloud deployment and AI projects.</>,
+                images: []
+            },
+            {
+                title: 'Streamlit',
+                description: <>Built AI/ML applications using Streamlit for real-time interaction.</>,
+                images: []
             }
         ]
     }
@@ -158,20 +187,20 @@ const about = {
 
 const blog = {
     label: 'Blog',
-    title: 'Writing about design and tech...',
+    title: 'Writing about software development and tech...',
     description: `Read what ${person.name} has been up to recently`
 }
 
 const work = {
     label: 'Work',
     title: 'My projects',
-    description: `Design and dev projects by ${person.name}`
+    description: `Python-based development and AI projects by ${person.name}`
 }
 
 const gallery = {
     label: 'Gallery',
-    title: 'My photo gallery',
-    description: `A photo collection by ${person.name}`,
+    title: 'My project gallery',
+    description: `A showcase of projects and experiences by ${person.name}`,
     images: [
         { 
             src: '/images/gallery/img-01.jpg', 
