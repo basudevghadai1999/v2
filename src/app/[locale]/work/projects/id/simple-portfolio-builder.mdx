@@ -1,6 +1,40 @@
 ---
-title: "Pembuat portofolio sederhana yang dibangun dengan Once UI dan Next.js"
-publishedAt: "2024-04-08"
+title: "Sistem Multi-Agen Bertenaga LLM"
+publishedAt: "2025-04-01"
+summary: "Mengembangkan dan menerapkan kerangka kerja AI modular yang mengintegrasikan beberapa agen LLM untuk orkestrasi tugas, memori semantik, dan penalaran berbasis API di AWS/GCP."
 images:
-  - "/images/projects/project-01/video-01.mp4"
+  - "/images/gallery/1720c36a-30c3-4e2a-b7a4-629e596a93cf.jpeg"
+  - "/images/gallery/278fa9c8-aaf2-4b2d-b1a9-d8c4cddce901.jpeg"
+team:
+  - name: "Basudev Ghadai"
+    role: "AI Fullstack Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/basudev-ghadai-67b07b200/"
 ---
+
+## Ikhtisar
+
+Mengembangkan sistem AI multi-agen yang komprehensif menggunakan LangGraph dan FastAPI, memungkinkan orkestrasi tugas cerdas dan manajemen memori semantik di seluruh infrastruktur cloud terdistribusi.
+
+## Fitur Utama
+
+- **Orkestrasi Multi-Agen**: Membangun kerangka kerja modular menggunakan LangGraph untuk mengoordinasikan beberapa agen LLM dengan peran dan kemampuan khusus.
+- **Sistem Memori Semantik**: Mengimplementasikan integrasi basis data vektor (Pinecone/Weaviate) untuk konteks persisten dan pengambilan informasi cerdas.
+- **Arsitektur Cloud-Native**: Diterapkan di AWS (ECS, App Runner) dan GCP (Vertex AI) dengan auto-scaling dan ketersediaan tinggi.
+- **Penalaran Berbasis API**: Membuat API RESTful dengan FastAPI untuk komunikasi agen real-time dan alur kerja pengambilan keputusan.
+
+## Teknologi yang Digunakan
+
+- **FastAPI**: Kerangka kerja API async berkinerja tinggi untuk komunikasi agen
+- **LangGraph**: Orkestrasi multi-agen dan manajemen alur kerja
+- **AWS/GCP**: Penerapan cloud dengan Elastic Beanstalk, ECS, dan Vertex AI
+- **Basis Data Vektor**: Pinecone dan Weaviate untuk pencarian semantik dan memori
+- **OpenAI/Bedrock**: Integrasi LLM untuk penalaran cerdas
+
+## Tantangan dan Pembelajaran
+
+Mengelola konsistensi status di seluruh agen terdistribusi adalah tantangan utama. Solusinya melibatkan implementasi lapisan memori semantik terpusat dengan embedding vektor, memungkinkan agen berbagi konteks secara efisien.
+
+## Hasil
+
+Sistem ini berhasil menangani tugas multi-langkah yang kompleks dengan akurasi yang lebih baik dan latensi yang berkurang. Sekarang memproses ribuan permintaan setiap hari.

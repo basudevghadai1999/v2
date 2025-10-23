@@ -1,6 +1,40 @@
 ---
-title: "Simple portfolio creator built with Once UI and Next.js"
-publishedAt: "2024-04-08"
+title: "LLM-Powered Multi-Agent System"
+publishedAt: "2025-04-01"
+summary: "Developed and deployed a modular AI framework integrating multiple LLM agents for task orchestration, semantic memory, and API-driven reasoning on AWS/GCP."
 images:
-  - "/images/projects/project-01/video-01.mp4"
+  - "/images/gallery/1720c36a-30c3-4e2a-b7a4-629e596a93cf.jpeg"
+  - "/images/gallery/278fa9c8-aaf2-4b2d-b1a9-d8c4cddce901.jpeg"
+team:
+  - name: "Basudev Ghadai"
+    role: "AI Fullstack Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/basudev-ghadai-67b07b200/"
 ---
+
+## Overview
+
+Developed a comprehensive multi-agent AI system using LangGraph and FastAPI, enabling intelligent task orchestration and semantic memory management across distributed cloud infrastructure.
+
+## Key Features
+
+- **Multi-Agent Orchestration**: Built a modular framework using LangGraph for coordinating multiple LLM agents with specialized roles and capabilities.
+- **Semantic Memory System**: Implemented vector database integration (Pinecone/Weaviate) for persistent context and intelligent information retrieval.
+- **Cloud-Native Architecture**: Deployed on AWS (ECS, App Runner) and GCP (Vertex AI) with auto-scaling and high availability.
+- **API-Driven Reasoning**: Created RESTful APIs with FastAPI for real-time agent communication and decision-making workflows.
+
+## Technologies Used
+
+- **FastAPI**: High-performance async API framework for agent communication
+- **LangGraph**: Multi-agent orchestration and workflow management
+- **AWS/GCP**: Cloud deployment with Elastic Beanstalk, ECS, and Vertex AI
+- **Vector Databases**: Pinecone and Weaviate for semantic search and memory
+- **OpenAI/Bedrock**: LLM integration for intelligent reasoning
+
+## Challenges and Learnings
+
+Managing state consistency across distributed agents was a key challenge. The solution involved implementing a centralized semantic memory layer with vector embeddings, enabling agents to share context efficiently. Additionally, optimizing API latency while maintaining reasoning quality required careful prompt engineering and caching strategies.
+
+## Outcome
+
+The system successfully handles complex multi-step tasks with improved accuracy and reduced latency. It's now processing thousands of requests daily, demonstrating the scalability and reliability of the architecture.

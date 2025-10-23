@@ -1,45 +1,45 @@
 ---
-title: "Membangun sistem desain adaptif untuk Archlight"
-publishedAt: "2024-04-08"
-summary: "Dalam proyek ini, saya mengembangkan sistem desain yang fleksibel dan skalabel menggunakan Next.js untuk pengembangan front-end dan Figma untuk kolaborasi desain."
+title: "Platform Otomasi AI Cloud-Native"
+publishedAt: "2025-01-15"
+summary: "Membangun platform otomasi bertenaga AI yang skalabel menggunakan Python, FastAPI, dan layanan AWS, memungkinkan orkestrasi alur kerja cerdas dan pemrosesan data real-time untuk klien enterprise."
 images:
-  - "/images/projects/project-01/cover-01.jpg"
-  - "/images/projects/project-01/cover-02.jpg"
-  - "/images/projects/project-01/cover-03.jpg"
-  - "/images/projects/project-01/cover-04.jpg"
+  - "/images/gallery/d73bbbab-4f64-42f1-92d4-f8eb95322860.jpeg"
+  - "/images/gallery/c6bb57dd-2a25-44a1-90a7-6c2a3f461911.jpeg"
+  - "/images/gallery/97b88c5a-c2e4-4203-97e4-e46da124a2a1.jpeg"
+  - "/images/gallery/f31b8981-2157-4b30-a3ea-b00da599c334.jpeg"
 team:
-  - name: "Selene Yu"
-    role: "Software Engineer"
+  - name: "Basudev Ghadai"
+    role: "AI Fullstack Developer"
     avatar: "/images/avatar.jpg"
-    linkedIn: "https://www.linkedin.com/company/once-ui/"
-  - name: "Jane Smith"
-    role: "Product Manager"
-    avatar: "/images/projects/project-01/avatar-01.png"
-    linkedIn: "https://www.linkedin.com/in/janesmith"
+    linkedIn: "https://www.linkedin.com/in/basudev-ghadai-67b07b200/"
 ---
 
 ## Ikhtisar
 
-Dalam proyek ini, saya mengembangkan sistem desain yang fleksibel dan skalabel menggunakan Next.js untuk pengembangan front-end dan Figma untuk kolaborasi desain. Tujuannya adalah untuk membuat perpustakaan komponen yang dapat digunakan kembali yang tidak hanya mematuhi prinsip desain yang konsisten tetapi juga mudah diperluas untuk kebutuhan di masa depan. Sistem desain ini bertujuan untuk meningkatkan pengalaman pengembang secara keseluruhan sambil menjaga konsistensi visual di berbagai proyek.
+Mengembangkan platform cloud-native komprehensif yang memanfaatkan AI dan otomasi untuk merampingkan proses bisnis, menampilkan orkestrasi alur kerja cerdas, analitik real-time, dan integrasi mulus dengan sistem enterprise.
 
 ## Fitur Utama
 
-- **Perpustakaan Komponen**: Membangun serangkaian komponen UI modular dan dapat digunakan kembali menggunakan React dan styled-components di Next.js, dengan fokus pada aksesibilitas dan responsivitas.
-- **Pengaturan Tema dan Kustomisasi**: Mengintegrasikan sistem pengaturan tema yang memungkinkan pergantian dan kustomisasi palet warna, tipografi, dan gaya tata letak dengan mudah menggunakan variabel CSS dan token Figma.
-- **Integrasi Figma**: Bekerja sama dengan desainer dengan menyiapkan perpustakaan desain bersama di Figma. Perpustakaan ini disinkronkan dengan kode, memastikan proses penyerahan desain berjalan mulus dan token desain tetap konsisten di kedua platform.
-- **Dokumentasi dan Panduan Penggunaan**: Mengembangkan dokumentasi lengkap dengan Storybook untuk menampilkan komponen, pola penggunaan, dan praktik terbaik, memastikan sistem desain mudah diadopsi oleh tim lain.
+- **Mesin Alur Kerja Bertenaga AI**: Membangun sistem otomasi cerdas menggunakan LangGraph dan FastAPI yang mengorkestrasi alur kerja multi-langkah kompleks dengan kemampuan pengambilan keputusan adaptif.
+- **Arsitektur Microservices**: Merancang dan mengimplementasikan arsitektur microservices yang skalabel dengan kontainerisasi Docker, memungkinkan penerapan independen dan scaling horizontal di seluruh infrastruktur AWS.
+- **Pipeline Pemrosesan Real-Time**: Mengembangkan pipeline pemrosesan data throughput tinggi menggunakan AWS Lambda, SQS, dan Kinesis untuk menangani jutaan event per hari dengan latensi sub-detik.
+- **Integrasi LLM**: Mengintegrasikan beberapa penyedia LLM (OpenAI, AWS Bedrock) dengan routing cerdas dan mekanisme fallback, memastikan uptime 99,9% dan efisiensi biaya optimal.
+- **Implementasi Basis Data Vektor**: Mengimplementasikan pencarian dan pengambilan semantik menggunakan Pinecone dan Weaviate, memungkinkan respons AI yang sadar konteks dan pemrosesan dokumen cerdas.
 
 ## Teknologi yang Digunakan
 
-- **Next.js**: Untuk aplikasi React yang cepat dan dirender di server.
-- **Figma**: Untuk membuat dan mengelola aset desain dan prototipe.
-- **Styled-Components**: Untuk menata komponen React dengan pendekatan modular dan tematis.
-- **Storybook**: Untuk membangun perpustakaan komponen interaktif dan terdokumentasi.
+- **Backend**: Python, FastAPI, Django, Flask
+- **AI/ML**: LangGraph, LangChain, OpenAI APIs, AWS Bedrock
+- **Infrastruktur Cloud**: AWS (ECS, Lambda, S3, RDS, ElastiCache), GCP (Vertex AI)
+- **Basis Data**: PostgreSQL, MongoDB, Redis, Pinecone, Weaviate
+- **DevOps**: Docker, Kubernetes, CI/CD dengan GitHub Actions, Terraform
 
 ## Tantangan dan Pembelajaran
 
-Salah satu tantangan utama adalah menyeimbangkan kebutuhan akan fleksibilitas dengan keinginan untuk menjaga konsistensi desain. Solusinya melibatkan pembuatan token desain yang terdefinisi dengan baik dan menetapkan pedoman yang jelas untuk kapan dan bagaimana komponen dapat disesuaikan. Selain itu, menyiapkan alur kerja kolaborasi yang efektif antara desainer dan pengembang menggunakan Figma dan Git adalah pengalaman belajar yang sangat meningkatkan prosesnya.
+Salah satu tantangan terbesar adalah mempertahankan kinerja yang konsisten sambil scaling untuk menangani traffic tingkat enterprise. Solusinya melibatkan implementasi strategi caching cerdas dengan Redis, optimasi query database, dan memanfaatkan AWS auto-scaling groups. Selain itu, mengelola biaya LLM sambil mempertahankan kualitas memerlukan pengembangan sistem caching prompt dan optimasi respons yang canggih yang mengurangi biaya API sebesar 60%.
+
+Pembelajaran kunci lainnya adalah merancang untuk ketahanan - mengimplementasikan circuit breakers, mekanisme retry, dan degradasi graceful memastikan platform mempertahankan ketersediaan tinggi bahkan selama pemadaman layanan parsial.
 
 ## Hasil
 
-Sistem desain ini sekarang aktif digunakan di berbagai proyek, yang mengarah pada siklus pengembangan yang lebih cepat, lebih sedikit inkonsistensi desain, dan peningkatan kolaborasi antara tim desain dan pengembangan. Sistem ini telah menjadi fondasi untuk mengembangkan produk kami secara efisien sambil memastikan pengalaman pengguna yang kohesif.
+Platform ini sekarang melayani beberapa klien enterprise, memproses lebih dari 5 juta alur kerja otomatis bulanan dengan uptime 99,95%. Platform ini telah mengurangi waktu pemrosesan manual sebesar 85%, meningkatkan akurasi keputusan sebesar 40%, dan menghasilkan penghematan biaya signifikan melalui otomasi cerdas. Arsitektur modular telah memungkinkan pengembangan fitur yang cepat, dengan kemampuan AI baru diterapkan setiap minggu tanpa mengganggu layanan yang ada.

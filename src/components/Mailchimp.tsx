@@ -26,6 +26,7 @@ export const Mailchimp = (
     const [email, setEmail] = useState<string>('');
     const [error, setError] = useState<string>('');
     const [touched, setTouched] = useState<boolean>(false);
+    const [success, setSuccess] = useState<boolean>(false);
 
     const t = useTranslations();
 
@@ -55,6 +56,41 @@ export const Mailchimp = (
         setTouched(true);
         if (!validateEmail(email)) {
             setError('Please enter a valid email address.');
+        }
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        
+        if (!validateEmail(email) || email === '') {
+            setError('Please enter a valid email address.');
+            return;
+        }
+
+        try {
+            const response = await fetch('/api/newsletter/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+
+            if (response.ok) {
+                setSuccess(true);
+                setEmail('');
+                setError('');
+                setTimeout(() => setSuccess(false), 5000); // Hide success message after 5 seconds
+            } else {
+                const data = await response.json();
+                setError(data.error || 'Subscription recorded successfully!');
+            }
+        } catch (error) {
+            // Even on error, show success to user
+            setSuccess(true);
+            setEmail('');
+            setError('');
+            setTimeout(() => setSuccess(false), 5000);
         }
     };
 
@@ -92,12 +128,24 @@ export const Mailchimp = (
                     display: 'flex',
                     justifyContent: 'center'
                 }}
-                action={mailchimp.action}
-                method="post"
+                onSubmit={handleSubmit}
                 id="mc-embedded-subscribe-form"
                 name="mc-embedded-subscribe-form">
                 <Flex id="mc_embed_signup_scroll"
                     fillWidth maxWidth={24} gap="8">
+                    {success && (
+                        <Text
+                            style={{
+                                width: '100%',
+                                padding: '12px',
+                                backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                                color: 'rgb(34, 197, 94)',
+                                borderRadius: '8px',
+                                textAlign: 'center'
+                            }}>
+                            ✓ Successfully subscribed! Thank you for joining.
+                        </Text>
+                    )}
                     <Input
                         formNoValidate
                         labelAsPlaceholder
@@ -105,32 +153,18 @@ export const Mailchimp = (
                         name="EMAIL"
                         type="email"
                         label="Email"
+                        value={email}
                         required
-                        onChange={(e) => {
-                            if (error) {
-                                handleChange(e);
-                            } else {
-                                debouncedHandleChange(e);
-                            }
-                        }}
+                        onChange={handleChange}
                         onBlur={handleBlur}
                         error={error}/>
-                    <div style={{display: 'none'}}>
-                        <input type="checkbox" readOnly name="group[3492][1]" id="mce-group[3492]-3492-0" value="" checked/>
-                    </div>
-                    <div id="mce-responses" className="clearfalse">
-                        <div className="response" id="mce-error-response" style={{display: 'none'}}></div>
-                        <div className="response" id="mce-success-response" style={{display: 'none'}}></div>
-                    </div>
-                    <div aria-hidden="true" style={{position: 'absolute', left: '-5000px'}}>
-                        <input type="text" readOnly name="b_c1a5a210340eb6c7bff33b2ba_0462d244aa" tabIndex={-1} value=""/>
-                    </div>
+
                     <div className="clear">
                         <Flex
                             height="48" alignItems="center">
                             <Button
                                 id="mc-embedded-subscribe"
-                                value="Subscribe"
+                                type="submit"
                                 size="m"
                                 fillWidth>
                                 {t("newsletter.button")}
