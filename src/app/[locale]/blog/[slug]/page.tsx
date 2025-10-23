@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { CustomMDX } from '@/components/mdx'
 import { getPosts } from '@/app/utils/utils'
 import { Avatar, Button, Flex, Heading, Text } from '@/once-ui/components'
+import { SocialShare } from '@/components'
 
 import { baseURL, renderContent } from '@/app/resources'
 import { unstable_setRequestLocale } from 'next-intl/server'
@@ -145,6 +146,11 @@ export default function Blog({ params }: BlogParams) {
 				fillWidth>
 				<CustomMDX source={post.content} />
 			</Flex>
+			<SocialShare
+				url={`https://${baseURL}/${params.locale}/blog/${params.slug}`}
+				title={post.metadata.title}
+				description={post.metadata.summary}
+			/>
 			<ScrollToHash />
 		</Flex>
 	)
