@@ -147,7 +147,7 @@ export default function Blog({ params }: BlogParams) {
 				<CustomMDX source={post.content} />
 			</Flex>
 			<SocialShare
-				url={`https://${baseURL}/${params.locale}/blog/${params.slug}`}
+				url={`https://${baseURL}/blog/${params.slug}`}
 				title={post.metadata.title}
 				description={post.metadata.summary}
 			/>
